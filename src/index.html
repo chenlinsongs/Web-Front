@@ -1,0 +1,144 @@
+<html>
+
+<body>
+    <style>
+        body {background-color: #f0f0f0;background-image: linear-gradient(180deg, #f0f0f0, #e0e0e0); margin: 0px; font-family: arial;}
+    </style>
+    <style type="text/css">
+        #topBar { background-color: #000000; height: 64px;width: 100%;}
+        #footerBar{ background-color: #312eff; height: 64px;width: 100%;}
+        #topBarRow {
+            position: relative;
+            top: 50%;
+            margin: auto;/**/
+            transform: translateY(-50%);
+        }
+        #mainRow {
+            /*font-size: 0;*/ /*去除inner-block之间的空格*/
+            position: relative;
+            margin: 0px auto;
+
+        }
+        #footerBarRow {
+            position: relative;
+            margin: auto;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        /*只有父节点指定高度以后才有效，父节点不知道高度时，当前div元素贴近父元素的，如果再使用translateY(-50%),元素会超出父元素边界线一半*/
+        #copyright {
+            /*position: relative;*/
+            /*top: 50%;*/
+            margin: auto;
+            /*transform: translateY(-50%);*/
+        }
+
+        #bottomNavBar2Parent {
+            position: fixed;
+            bottom: 0px;
+            width: 100%;
+            background-color: #202020;
+            /*border-top: 1px solid #444444;*/
+        }
+        #bottomNavBarRow {
+            margin: auto;
+            background-color: black;
+            display: grid;
+        }
+
+        #bottomNavBarRow>div{
+            border-left: 1px solid #404040;
+            border-right: 1px solid #000000;
+            height: 48px;
+            padding-top: 16px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .navButton {
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        allTrailsButtonDiv {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        #trailTocButtonDiv {
+            grid-column-start: 3;
+            grid-column-end: 5;
+        }
+        #pageTocButtonDiv {
+            grid-column-start: 5;
+            grid-column-end: 7;
+        }
+        #prevButtonDiv {
+            grid-column-start: 7;
+            grid-column-end: 9;
+        }
+        #nextButtonDiv {
+            grid-column-start: 9;
+            grid-column-end: 13;
+        }
+    </style>
+
+    <!-- topbar  -->
+    <div id = "topBar">
+<!--        &lt;!&ndash; topbar  &ndash;&gt;-->
+        <div id = "topBarRow" style="width: 1200px;height: 50px; background-color: #91ffdb;border: 2px solid coral;">
+
+
+        </div>
+    </div>
+
+    <div >
+        <div id="mainRow" style="width: 1200px;">
+            <div style="display: inline-block; box-sizing: border-box; background-color: #91ffdb; vertical-align: top;width: 330px;height: 2000px; ">
+                ddd
+            </div>
+
+            <div style="display: inline-block; box-sizing: border-box;  background-color: #91ffdb; width: 865px;height: 2000px;">
+                fff
+
+            </div>
+        </div>
+    </div>
+
+    <!--  footbar -->
+    <div id="footerBar">
+        <div id="footerBarRow" style="display: block;width: 1200px; background-color: gold;">
+            <div id="copyright" style=" box-sizing: border-box;background-color: rgba(255,47,74,0.93);  width: 1152px; ">
+                Copyright &nbsp;Jenkov Aps
+            </div>
+        </div>
+    </div>
+    <div id="segmentation" style="height: 64px ;background-color: gold;width: 100%"></div>
+
+    <div id="bottomNavBar2Parent">
+        <div id="bottomNavBarRow">
+            <div id="allTrailsButtonDiv">
+                <span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAbUlEQVRIx+3SQQrAIAxEUenNewrvmkXUQgVJEwWdQEED4kb+QzSEPw0z389yi6d3JJKaWY5ryBKgxSVS9jgF9OItQkRXRaBxDYHHJeISt34XND5EEHETQcY/iEfcvAkqbD7yAaYB1PkD7AB4TAY0StbUr69awQAAAABJRU5ErkJggg=="></span>
+                <span class="navButton" style="position:relative; top:-4px;">All Trails</span>
+            </div>
+            <div id="trailTocButtonDiv">
+                <span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAPElEQVRIx2P4TwPAgAzoZgEDrQDdLaB6cI1aMHgtoFriGRkWEB3eg9YHo0E08BaM8CAiWoLaFlAL0NwCANELs4XjmhvVAAAAAElFTkSuQmCC"></span>
+                <span class="navButton" style="position:relative; top:-4px;">Trail TOC</span>
+            </div>
+            <div id="pageTocButtonDiv">
+                <span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAANUlEQVRIx2NggIL/VAYM6GDUglELqGcBA4Vg1ALqWkBOhA4uH4wG0cBbMBpEw9QCagG6WQAAX980BcIgiscAAAAASUVORK5CYII="></span>
+                <span class="navButton" style="position:relative; top:-4px;">Page TOC</span>
+            </div>
+            <div id="prevButtonDiv">
+                <span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuNvyMY98AAACCSURBVEhL3ZRRCsAgDEM9iez+dxJPUl0K9W+MtKMiC/RL80Lz0eKViNQxRpsvwnvHv8ssvGD8ORzjh7Odf4F34zxK30O1qImEV7Pw0nUJeEuFY/xwspZceKiWVLgqPUC1JQSAc0Iwh2+iZiIkdiqWdobknOslmM8JwcbxELaujSGl3GNH6mWcCMu2AAAAAElFTkSuQmCC"></span>
+                <span class="navButton" style="position:relative; top:-4px;">Previous</span>
+            </div>
+            <div id="nextButtonDiv">
+                <span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAb0lEQVRIx82W2w1AIQhDmcS4/07GScDbu4AvUlMSv9QeA6RohnD3GhF9TAL7DeeK3cYuBEscgss6kBc16VlI2YTULKStIH9aMzXRgTxJlzaECpAQv+okaptSX35gFed+RBWn2jV14FBHJvVnwRT/AGJL6mWb6M7pAAAAAElFTkSuQmCC"></span>
+                <span class="navButton" id="nextButton2" style="position:relative; top:-4px;">Next</span>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
